@@ -42,3 +42,92 @@ nav button:hover {
     box-shadow: 0 0 15px 10px #76e9b4;
     transform: scale(1.1);
 }
+
+.hero {
+    padding: 20px 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.hero :is(figure, .call-to-action) {
+    flex: 1;
+}
+.hero figure {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.hero figure .image {
+    background-color: #000;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    justify-self: end;
+    overflow: hidden;
+    
+    /* transform: skew(-20deg); */
+}
+
+.hero figure .image:hover {
+    animation: pulse .5s infinite alternate;
+}
+
+figure .image:nth-child(2) {
+    top:-20px;
+    justify-self: start;
+}
+
+figure .image:nth-child(4) {
+    top: -20px;
+    justify-self: start;
+}
+
+.hero .call-to-action h1 {
+    font-size: 4rem;
+    color: #202020;
+}
+
+.hero .call-to-action h1 span {
+    background-color: #ffc400;
+    padding: 5px;
+}
+
+.hero .call-to-action p {
+    padding: 22px;
+    font-size: 20px;
+    color: #555;
+}
+
+
+.hero .call-to-action button {
+    padding: 15px 30px;
+    background-color: #1fd688;
+    color: #fff;
+    border: none;
+    box-shadow: 0 2px 15px #15e986;
+    cursor: pointer;
+    border-radius: 20px;
+
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(0.9);
+        opacity: 0.7;
+    }
+
+    to{
+        transform :scale(1.1);
+        opacity: 1;
+    }
+}
+
+.theimage{
+    width: 200px;
+    height: 200px;
+}
+
+
+
+
